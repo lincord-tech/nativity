@@ -21,7 +21,7 @@ for word in dictionary:
 def show_values(word):
   return tst.get(word)
 
-
+app.register_error_handler(400, handle_bad_request)
 
 # def abort_if_dict_id_doesnt_exist(dict_id):
 #     if tst.get(dict_id) == -1:
