@@ -19,6 +19,8 @@ for word in dictionary:
 
 @app.route('/<word>')
 def show_values(word):
+  if tst.get(word) = -1:
+    return "No such value"
   return tst.get(word)
 
 
