@@ -20,20 +20,6 @@ for word in dictionary:
 @app.route('/<word>')
 def show_values(word):
   if tst.get(word) == -1:
-    abort(404, message="not found".format(word))  
+    abort(404, message="not found".format(word))
   else:
     return tst.get(word)
-
-
-# def abort_if_dict_id_doesnt_exist(dict_id):
-#     if tst.get(dict_id) == -1:
-#         abort(404, message="not found".format(dict_id))
-
-
-# class Dict(Resource):
-#     def get(self, dict_id):
-#         abort_if_dict_id_doesnt_exist(dict_id)
-#         return tst.get(dict_id)
-
-
-# api.add_resource(Dict, '/<dict_id>')
